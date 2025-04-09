@@ -200,43 +200,43 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_mt|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_mt|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|Win32'">
     <ClCompile>
@@ -263,7 +263,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDd.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDd.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
       <EntryPointSymbol>DllMainCRTStartupForYY_Thunks</EntryPointSymbol>
@@ -298,7 +298,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSD.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSD.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
       <EntryPointSymbol>DllMainCRTStartupForYY_Thunks</EntryPointSymbol>
@@ -422,7 +422,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDd.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDd.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
       <MinimumRequiredVersion>5.02</MinimumRequiredVersion>
       <EntryPointSymbol>DllMainCRTStartupForYY_Thunks</EntryPointSymbol>
@@ -457,7 +457,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSD.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSD.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
       <MinimumRequiredVersion>5.02</MinimumRequiredVersion>
       <EntryPointSymbol>DllMainCRTStartupForYY_Thunks</EntryPointSymbol>

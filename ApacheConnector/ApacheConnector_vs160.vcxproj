@@ -68,22 +68,22 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='release_shared|x64'">mod_poco</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|Win32'">
-    <OutDir>..\bin\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj\ApacheConnector\$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|Win32'">
-    <OutDir>..\bin\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj\ApacheConnector\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|x64'">
-    <OutDir>..\bin64\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj64\ApacheConnector\$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|x64'">
-    <OutDir>..\bin64\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj64\ApacheConnector\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -107,13 +107,13 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>libapr-1.lib;libaprutil-1.lib;libhttpd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\bin\mod_pocod.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\mod_pocod.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin\mod_pocod.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\mod_pocod.pdb</ProgramDatabaseFile>
       <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\mod_pocod.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\mod_pocod.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -140,14 +140,14 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>libapr-1.lib;libaprutil-1.lib;libhttpd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\bin\mod_poco.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\mod_poco.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\mod_poco.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\mod_poco.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -171,13 +171,13 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>libapr-1.lib;libaprutil-1.lib;libhttpd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\bin64\mod_poco64d.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\mod_poco64d.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin64\mod_poco64d.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\mod_poco64d.pdb</ProgramDatabaseFile>
       <AdditionalLibraryDirectories>..\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\mod_pocod.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\mod_pocod.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -204,14 +204,14 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>libapr-1.lib;libaprutil-1.lib;libhttpd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\bin64\mod_poco64.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\mod_poco64.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\mod_poco.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\mod_poco.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>

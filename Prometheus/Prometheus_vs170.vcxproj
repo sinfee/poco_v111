@@ -226,7 +226,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin\PocoPrometheusd.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoPrometheusd.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoPrometheusd.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
@@ -373,7 +373,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin64\PocoPrometheus64d.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoPrometheus64d.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoPrometheusd.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>

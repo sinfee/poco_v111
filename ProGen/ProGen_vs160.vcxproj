@@ -199,51 +199,51 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_mt|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_mt|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|Win32'">
     <ClCompile>

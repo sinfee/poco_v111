@@ -227,7 +227,7 @@
       <AdditionalDependencies>iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin\PocoFoundationd.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoFoundationd.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoFoundationd.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
@@ -256,7 +256,7 @@
       <AdditionalDependencies>iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin64\PocoFoundation64d.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoFoundation64d.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoFoundationd.lib</ImportLibrary>
     </Link>

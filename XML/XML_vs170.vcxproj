@@ -225,7 +225,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin\PocoXMLd.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoXMLd.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoXMLd.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
@@ -372,7 +372,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin64\PocoXML64d.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoXML64d.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoXMLd.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>

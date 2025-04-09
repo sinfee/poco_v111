@@ -237,7 +237,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\..\bin\PocoDataPostgreSQLd.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoDataPostgreSQLd.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDataPostgreSQLd.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
@@ -384,7 +384,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\..\bin64\PocoDataPostgreSQL64d.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoDataPostgreSQL64d.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDataPostgreSQLd.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>

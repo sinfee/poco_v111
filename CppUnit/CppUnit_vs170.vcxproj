@@ -225,7 +225,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin\CppUnitd.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\CppUnitd.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\CppUnitd.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
@@ -372,7 +372,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin64\CppUnit64d.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\CppUnit64d.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\CppUnitd.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>

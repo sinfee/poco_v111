@@ -173,55 +173,55 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='release_static_mt|x64'">PocoDNSSDBonjourmt</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|Win32'">
-    <OutDir>..\..\bin\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj\Bonjour\$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|Win32'">
-    <OutDir>..\..\bin\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj\Bonjour\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_mt|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj\Bonjour\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj\Bonjour\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj\Bonjour\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj\Bonjour\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|x64'">
-    <OutDir>..\..\bin64\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj64\Bonjour\$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|x64'">
-    <OutDir>..\..\bin64\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj64\Bonjour\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_mt|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj64\Bonjour\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj64\Bonjour\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj64\Bonjour\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
     <IntDir>obj64\Bonjour\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|Win32'">
@@ -247,13 +247,13 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>dnssd.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\..\bin\PocoDNSSDBonjourd.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourd.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjourd.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourd.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -283,14 +283,14 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>dnssd.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\..\bin\PocoDNSSDBonjour.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjour.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjour.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjour.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -316,7 +316,7 @@
       <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Lib>
-      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjourmtd.lib</OutputFile>
+      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourmtd.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|Win32'">
@@ -344,7 +344,7 @@
       <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Lib>
-      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjourmt.lib</OutputFile>
+      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourmt.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|Win32'">
@@ -369,7 +369,7 @@
       <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Lib>
-      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjourmdd.lib</OutputFile>
+      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourmdd.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|Win32'">
@@ -398,7 +398,7 @@
     </ClCompile>
     <Lib>
       <AdditionalDependencies>dnssd.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjourmd.lib</OutputFile>
+      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourmd.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|x64'">
@@ -424,13 +424,13 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>dnssd.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\..\bin64\PocoDNSSDBonjour64d.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjour64d.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <AdditionalLibraryDirectories>..\..\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjourd.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourd.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -460,14 +460,14 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>dnssd.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\..\bin64\PocoDNSSDBonjour64.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjour64.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\..\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjour.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjour.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -493,7 +493,7 @@
       <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Lib>
-      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjourmtd.lib</OutputFile>
+      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourmtd.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|x64'">
@@ -521,7 +521,7 @@
       <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Lib>
-      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjourmt.lib</OutputFile>
+      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourmt.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|x64'">
@@ -546,7 +546,7 @@
       <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Lib>
-      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjourmdd.lib</OutputFile>
+      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourmdd.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|x64'">
@@ -574,7 +574,7 @@
       <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Lib>
-      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoDNSSDBonjourmd.lib</OutputFile>
+      <OutputFile>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourmd.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -512,7 +512,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>dnssd.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\..\bin\PocoDNSSDBonjourd.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjourd.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -546,7 +546,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>dnssd.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\..\bin\PocoDNSSDBonjour.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjour.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -671,7 +671,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>dnssd.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\..\bin64\PocoDNSSDBonjour64d.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjour64d.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -705,7 +705,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>dnssd.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\..\bin64\PocoDNSSDBonjour64.dll</OutputFile>
+      <OutputFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoDNSSDBonjour64.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\..\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>

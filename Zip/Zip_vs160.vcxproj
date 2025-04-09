@@ -199,43 +199,43 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_mt|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|Win32'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_mt|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|x64'">
-    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\</OutDir>
+    <OutDir>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|Win32'">
     <ClCompile>
@@ -260,9 +260,9 @@
       <AdditionalDependencies>ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin\PocoZipd.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoZipd.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoZipd.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoZipd.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
     </Link>
@@ -296,7 +296,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoZip.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoZip.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
     </Link>
@@ -314,7 +314,7 @@
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader />
-      <ProgramDataBaseFileName>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoZipmtd.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoZipmtd.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
@@ -360,7 +360,7 @@
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader />
-      <ProgramDataBaseFileName>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoZipmdd.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoZipmdd.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
@@ -385,7 +385,7 @@
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader />
-      <ProgramDataBaseFileName>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoZipmd.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoZipmd.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat />
       <CompileAs>Default</CompileAs>
@@ -420,9 +420,9 @@
       <AdditionalDependencies>ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\bin64\PocoZip64d.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)bin_$(PlatformTarget)_$(PlatformToolset)\PocoZip64d.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoZipd.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoZipd.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
       <MinimumRequiredVersion>5.02</MinimumRequiredVersion>
     </Link>
@@ -456,7 +456,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoZip.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoZip.lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
       <MinimumRequiredVersion>5.02</MinimumRequiredVersion>
     </Link>
@@ -474,7 +474,7 @@
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader />
-      <ProgramDataBaseFileName>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoZipmtd.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoZipmtd.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
@@ -520,7 +520,7 @@
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader />
-      <ProgramDataBaseFileName>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)_xp\PocoZipmdd.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset)\PocoZipmdd.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
