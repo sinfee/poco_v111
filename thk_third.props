@@ -8,7 +8,7 @@
       <AdditionalDependencies>libssl.lib;libcrypto.lib;libpq.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ClCompile>
-      <AdditionalIncludeDirectories Condition="$(THK_XP_MODE) ==1  or $(PlatformToolset.EndsWith('_xp'))">$(SolutionDir)thirdapi\;$(SolutionDir)thirdapi\inc_xp;$(SolutionDir)thirdapi\mysql;$(SolutionDir)thirdapi\postgresql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="$(THK_XP_MODE) ==1  or $(PlatformToolset.EndsWith('_xp'))">$(SolutionDir)thirdapi\;$(SolutionDir)thirdapi\inc;$(SolutionDir)thirdapi\mysql;$(SolutionDir)thirdapi\postgresql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="$(THK_XP_MODE) !=1  AND !$(PlatformToolset.EndsWith('_xp'))">$(SolutionDir)thirdapi\;$(SolutionDir)thirdapi\inc;$(SolutionDir)thirdapi\mysql;$(SolutionDir)thirdapi\postgresql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
