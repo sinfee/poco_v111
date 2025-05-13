@@ -160,7 +160,7 @@ std::string EnvironmentImpl::osVersionImpl()
 std::string EnvironmentImpl::osArchitectureImpl()
 {
 	SYSTEM_INFO si;
-	GetSystemInfo(&si);
+	GetNativeSystemInfo(&si);
 	switch (si.wProcessorArchitecture)
 	{
 	case PROCESSOR_ARCHITECTURE_INTEL:
@@ -171,8 +171,17 @@ std::string EnvironmentImpl::osArchitectureImpl()
 		return "ALPHA";
 	case PROCESSOR_ARCHITECTURE_PPC:
 		return "PPC";
+	case PROCESSOR_ARCHITECTURE_SHX:
+		return "SHX";
+	case PROCESSOR_ARCHITECTURE_ARM:
+		return "ARM";
 	case PROCESSOR_ARCHITECTURE_IA64:
 		return "IA64";
+	case PROCESSOR_ARCHITECTURE_ALPHA64:
+		return "ALPHA64";
+	case PROCESSOR_ARCHITECTURE_MSIL:
+		return "MSIL";
+
 #ifdef PROCESSOR_ARCHITECTURE_IA32_ON_WIN64
 	case PROCESSOR_ARCHITECTURE_IA32_ON_WIN64:
 		return "IA64/32";
@@ -239,7 +248,7 @@ void EnvironmentImpl::nodeIdImpl(NodeId& id)
 unsigned EnvironmentImpl::processorCountImpl()
 {
 	SYSTEM_INFO si;
-	GetSystemInfo(&si);
+	GetNativeSystemInfo(&si);
 	return si.dwNumberOfProcessors;
 }
 

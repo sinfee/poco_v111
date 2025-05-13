@@ -125,6 +125,10 @@ public:
 	Family family() const;
 		/// Returns the address family (IPv4 or IPv6) of the address.
 
+	// added by sinfee
+	bool isV4() const;
+	bool isV6() const;
+
 	Poco::UInt32 scope() const;
 		/// Returns the IPv6 scope identifier of the address. Returns 0 if
 		/// the address is an IPv4 address, or the address is an
@@ -406,6 +410,17 @@ inline void IPAddress::newIPv4(const void* hostAddr)
 inline void IPAddress::newIPv4(unsigned prefix)
 {
 	_pImpl = new Poco::Net::Impl::IPv4AddressImpl(prefix);
+}
+
+inline bool IPAddress::isV4() const
+{
+	return family() == IPv4;
+}
+
+
+inline bool IPAddress::isV6() const
+{
+	return family() == IPv6;
 }
 
 

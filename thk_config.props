@@ -14,15 +14,12 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <PreprocessorDefinitions Condition="$(THK_XP_MODE) ==1  or $(PlatformToolset.EndsWith('_xp'))">POCO_FORCE_MIN_WINDOWS_OS_SUPPORT;POCO_NET_NO_UNIX_SOCKET;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="$(THK_XP_MODE) !=1  AND !$(PlatformToolset.EndsWith('_xp'))">POCO_NET_NO_UNIX_SOCKET;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="$(THK_XP_MODE) !=1  AND !$(PlatformToolset.EndsWith('_xp'))">POCO_NET_NO_UNIX_SOCKET;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories Condition="$(THK_XP_MODE) ==1  or $(PlatformToolset.EndsWith('_xp'))">$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset);$(SolutionDir)thirdapi\lib$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalLibraryDirectories Condition="$(THK_XP_MODE) !=1  AND !$(PlatformToolset.EndsWith('_xp'))">$(SolutionDir)lib_$(PlatformTarget)_$(PlatformToolset);$(SolutionDir)thirdapi\lib$(PlatformTarget);$(ThkExtApi)\YYThunk\objs\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies Condition="$(THK_XP_MODE) ==1  or $(PlatformToolset.EndsWith('_xp'))">%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="$(THK_XP_MODE) !=1  AND !$(PlatformToolset.EndsWith('_xp'))">YY_Thunks_for_Win7.obj;%(AdditionalDependencies)</AdditionalDependencies>
-      <EntryPointSymbol Condition="'$(OutputType)' == 'library' AND ($(THK_XP_MODE) ==1  or $(PlatformToolset.EndsWith('_xp')))">
-      </EntryPointSymbol>
+      <MinimumRequiredVersion Condition="$(THK_XP_MODE) !=1  and !$(PlatformToolset.EndsWith('_xp'))">6.01</MinimumRequiredVersion>
     </Link>
   </ItemDefinitionGroup>
   <PropertyGroup Label="Configuration">
