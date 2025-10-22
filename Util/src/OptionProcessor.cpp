@@ -49,7 +49,7 @@ bool OptionProcessor::process(const std::string& argument, std::string& optionNa
 	{
 		if (!_deferredOption.empty())
 			return processCommon(argument, false, optionName, optionArg);
-		else if (_unixStyle)
+		else if (_unixStyle || (!argument.empty() && argument.front() == '-'))
 			return processUnix(argument, optionName, optionArg);
 		else
 			return processDefault(argument, optionName, optionArg);
