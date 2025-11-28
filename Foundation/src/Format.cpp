@@ -127,6 +127,8 @@ namespace
 		case 'e': str << std::scientific; break;
 		case 'E': str << std::scientific << std::uppercase; break;
 		case 'f': str << std::fixed; break;
+		case 'g': str << std::defaultfloat; break;
+		case 'G': str << std::defaultfloat << std::uppercase; break;
 		}
 	}
 	
@@ -158,7 +160,45 @@ namespace
 		else if (any.type() == typeid(bool))
 			str << AnyCast<bool>(any);
 	}
-
+	void writeAnyFloat(std::ostream& str, const Any& any)
+	{
+		if (any.type() == typeid(float))
+			str << AnyCast<float>(any);
+		else if (any.type() == typeid(double))
+			str << AnyCast<double>(any);
+		else if (any.type() == typeid(long double))
+			str << AnyCast<long double>(any);
+		else
+		{
+			// 甚至可以兼容整数转浮点输出
+			writeAnyInt(str, any);
+		}
+	}
+	void writeAnyString(std::ostream& str, const Any& any)
+	{
+		if (any.type() == typeid(std::string))
+			str << RefAnyCast<std::string>(any);
+		else if (any.type() == typeid(const char*))
+		{
+			// 【安全修正】：取出指针前先检查
+			const char* ptr = AnyCast<const char*>(any);
+			if (ptr)
+				str << ptr;
+			else
+				str << "(null)"; // 或者什么都不做，视你需求而定
+		}
+		else if (any.type() == typeid(char*))
+		{
+			// 【安全修正】：同上，针对非 const 指针
+			char* ptr = AnyCast<char*>(any);
+			if (ptr)
+				str << ptr;
+			else
+				str << "(null)";
+		}
+		else
+			throw BadCastException("Not a string type"); // 让外层捕获
+	}
 
 	void formatOne(std::string& result, std::string::const_iterator& itFmt, const std::string::const_iterator& endFmt, std::vector<Any>::const_iterator& itVal)
 	{
@@ -192,7 +232,17 @@ namespace
 					case 'L': str << AnyCast<Int64>(*itVal++); break;
 					case 'h': str << AnyCast<short>(*itVal++); break;
 					case '?': writeAnyInt(str, *itVal++); break;
-					default:  str << AnyCast<int>(*itVal++); break;
+					//default:  str << AnyCast<int>(*itVal++); break;
+					default:
+						try {
+							str << AnyCast<int>(*itVal); // 先试着按标准 int 转
+							itVal++;
+						}
+						catch (BadCastException&) {
+							// 如果不是 int (比如是 unsigned int, long)，尝试智能匹配
+							writeAnyInt(str, *itVal++);
+						}
+						break;
 					}
 					break;
 				case 'o':
@@ -211,16 +261,21 @@ namespace
 				case 'e':
 				case 'E':
 				case 'f':
+				case 'g': 
+				case 'G': 
 					switch (mod)
 					{
 					case 'l': str << AnyCast<long double>(*itVal++); break;
 					case 'L': str << AnyCast<long double>(*itVal++); break;
 					case 'h': str << AnyCast<float>(*itVal++); break;
-					default:  str << AnyCast<double>(*itVal++); break;
+					//default:  str << AnyCast<double>(*itVal++); break;
+					default:  writeAnyFloat(str, *itVal++); break;
 					}
 					break;
 				case 's':
-					str << RefAnyCast<std::string>(*itVal++);
+				case 'v':
+					//str << RefAnyCast<std::string>(*itVal++);
+					writeAnyString(str, *itVal++);
 					break;
 				case 'z':
 					str << AnyCast<std::size_t>(*itVal++); 
@@ -244,14 +299,14 @@ namespace
 std::string format(const std::string& fmt, const Any& value) 
 {
 	std::string result;
-	format(result, fmt, value);
+	Poco::format(result, fmt, value);
 	return result;
 }
 
 
 void format(std::string& result, const char *fmt, const std::vector<Any>& values)
 {
-	format(result, std::string(fmt), values);
+	Poco::format(result, std::string(fmt), values);
 }
 
 
